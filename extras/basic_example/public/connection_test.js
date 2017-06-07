@@ -8,7 +8,7 @@ function printText(text) {
 }
 
 window.onload = function () {
-  var config = {audio: true, video: true, data: true, videoSize: [800, 600, 800, 600]};
+  var config = {audio: true, video: true, data: true, videoSize: [640, 480, 640, 480]};
   localStream = Erizo.Stream(config);
   var createToken = function(userName, role, callback) {
 

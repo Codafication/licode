@@ -46,8 +46,8 @@ Erizo.FirefoxStack = function (spec) {
             active: true, 
             priority: 'high', 
             maxBitrate: 40000, 
-            maxHeight: 800, 
-            maxWidth: 600 },{ 
+            maxHeight: 640, 
+            maxWidth: 480 },{ 
             rid: 'egg', 
             active: true, 
             priority: 'medium', 

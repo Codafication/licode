@@ -57,7 +57,7 @@ window.onload = function () {
                 video: true,
                 data: true,
                 screen: screen,
-                videoSize: [800, 600, 800, 600],
+                videoSize: [640, 480, 640, 480],
                 videoFrameRate: [10, 20]};
   // If we want screen sharing we have to put our Chrome extension id.
   // The default one only works in our Lynckia test servers.
