@@ -18,15 +18,15 @@ VideoMixer::VideoMixer() {
   // m.videoCodec.bitRate = 2000000;
   // ELOG_DEBUG("m.videoCodec.bitrate %d\n", m.videoCodec.bitRate);
   m.hasVideo = true;
-  m.videoCodec.width = 640;
-  m.videoCodec.height = 480;
+  m.videoCodec.width = 800;
+  m.videoCodec.height = 600;
   ip->init(m, this);
 
   MediaInfo om;
   om.processorType = RTP_ONLY;
   om.videoCodec.bitRate = 2000000;
-  om.videoCodec.width = 640;
-  om.videoCodec.height = 480;
+  om.videoCodec.width = 800;
+  om.videoCodec.height = 600;
   om.videoCodec.frameRate = 20;
   om.hasVideo = true;
   op = new OutputProcessor();
