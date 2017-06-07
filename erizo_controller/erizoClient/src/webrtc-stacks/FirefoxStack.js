@@ -1,4 +1,3 @@
-/* global L, Erizo*/
 this.Erizo = this.Erizo || {};
 
 Erizo.FirefoxStack = (specInput) => {
@@ -18,8 +17,8 @@ Erizo.FirefoxStack = (specInput) => {
           active: true,
           priority: 'high',
           maxBitrate: 40000,
-          maxHeight: 640,
-          maxWidth: 480 }, {
+          maxHeight: 800,
+          maxWidth: 600 }, {
             rid: 'egg',
             active: true,
             priority: 'medium',
