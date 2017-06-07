@@ -132,8 +132,8 @@ int ExternalInput::init() {
     om.processorType = RTP_ONLY;
     om.videoCodec.codec = VIDEO_CODEC_VP8;
     om.videoCodec.bitRate = 1000000;
-    om.videoCodec.width = 640;
-    om.videoCodec.height = 480;
+    om.videoCodec.width = 800;
+    om.videoCodec.height = 600;
     om.videoCodec.frameRate = 20;
     om.hasVideo = true;
 
