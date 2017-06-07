@@ -1,3 +1,4 @@
+/* global L, Erizo*/
 this.Erizo = this.Erizo || {};
 
 Erizo.FirefoxStack = (specInput) => {
