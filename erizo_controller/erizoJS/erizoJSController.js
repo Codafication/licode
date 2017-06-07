@@ -384,6 +384,13 @@ exports.ErizoJSController = function (threadPool) {
                 closeWebRtcConnection(subscriber);
             }
             closeWebRtcConnection(publisher.wrtc);
+
+            for (var url in publisher.externalOutputs) {
+                if (publisher.externalOutputs.hasOwnProperty(url)) {
+                    publisher.removeExternalOutput(url)
+                }
+            }
+
             publisher.muxer.close(function(message) {
                 log.info('message: muxer closed succesfully, ' +
                          'id: ' + from + ', ' +
