@@ -1108,7 +1108,7 @@ namespace erizo {
 		    std::ostringstream address;
 				address << pieces[10] << ":" << pieces[11] << ":" << pieces[12] << ":" << pieces[13] << ":" << pieces[14] << ":" << pieces[15] << ":" << pieces[16] << ":" << pieces[17];
 				cand.rAddress = address.str();
-				cand.rPort = (unsigned int) strtoul(pieces[18].c_str(), nullptr, 10);
+				cand.rPort = (unsigned int) strtoul(pieces[19].c_str(), nullptr, 10);
 			}
       ELOG_DEBUG("Parsing raddr srlfx or relay %s, %u \n", cand.rAddress.c_str(), cand.rPort);
     }
