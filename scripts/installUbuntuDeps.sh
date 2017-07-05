@@ -65,11 +65,11 @@ install_apt_deps(){
   install_nvm_node
   nvm use
   npm install -g node-gyp
-  sudo apt-get install -qq python-software-properties -y
-  sudo apt-get install -qq software-properties-common -y
+  sudo DEBIAN_FRONTEND=noninteractive apt-get install -qq python-software-properties -y
+  sudo DEBIAN_FRONTEND=noninteractive apt-get install -qq software-properties-common -y
   sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
-  sudo apt-get update -y
-  sudo apt-get install -qq git make gcc-5 g++-5 libssl-dev cmake libglib2.0-dev pkg-config libboost-regex-dev libboost-thread-dev libboost-system-dev liblog4cxx10-dev rabbitmq-server mongodb curl libboost-test-dev -y
+  sudo DEBIAN_FRONTEND=noninteractive apt-get update -y
+  sudo DEBIAN_FRONTEND=noninteractive apt-get install -qq git make gcc-5 g++-5 libssl-dev cmake libglib2.0-dev pkg-config libboost-regex-dev libboost-thread-dev libboost-system-dev liblog4cxx10-dev rabbitmq-server mongodb curl libboost-test-dev -y
   sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-5 60 --slave /usr/bin/g++ g++ /usr/bin/g++-5
 
   sudo chown -R `whoami` ~/.npm ~/tmp/ || true
@@ -148,7 +148,7 @@ install_opus(){
 
 install_mediadeps(){
   install_opus
-  sudo apt-get -qq install yasm libvpx. libx264.
+  sudo DEBIAN_FRONTEND=noninteractive apt-get -qq install yasm libvpx. libx264.
   if [ -d $LIB_DIR ]; then
     cd $LIB_DIR
     if [ ! -f ./libav-11.1.tar.gz ]; then
@@ -171,7 +171,7 @@ install_mediadeps(){
 
 install_mediadeps_nogpl(){
   install_opus
-  sudo apt-get -qq install yasm libvpx.
+  sudo DEBIAN_FRONTEND=noninteractive apt-get -qq install yasm libvpx.
   if [ -d $LIB_DIR ]; then
     cd $LIB_DIR
     if [ ! -f ./libav-11.1.tar.gz ]; then

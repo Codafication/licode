@@ -5,7 +5,7 @@ MAINTAINER Lynckia
 WORKDIR /opt
 
 # Download latest version of the code and install dependencies
-RUN  apt-get update && apt-get install -y git wget curl
+RUN apt-get update && apt-get install -y git wget curl
 
 COPY . /opt/licode
 
