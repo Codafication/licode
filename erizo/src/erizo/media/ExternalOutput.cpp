@@ -360,8 +360,8 @@ bool ExternalOutput::initContext() {
     video_stream_ = avformat_new_stream(context_, videoCodec);
     video_stream_->id = 0;
     video_stream_->codec->codec_id = context_->oformat->video_codec;
-    video_stream_->codec->width = 800;
-    video_stream_->codec->height = 600;
+    video_stream_->codec->width = 640;
+    video_stream_->codec->height = 480;
     video_stream_->time_base = (AVRational) { 1, 30 };
     // A decent guess here suffices; if processing the file with ffmpeg,
       // use -vsync 0 to force it not to duplicate frames.
