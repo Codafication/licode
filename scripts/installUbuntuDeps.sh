@@ -54,7 +54,8 @@ install_nvm_node() {
       cd "$CURRENT_DIR"
     fi
     . $NVM_CHECK
-    nvm install
+    nvm install 6.9.2
+    nvm alias default 6.9.2
   else
     mkdir -p $LIB_DIR
     install_nvm_node
