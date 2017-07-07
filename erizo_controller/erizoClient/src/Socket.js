@@ -28,13 +28,14 @@ Erizo.Socket = () => {
 
   that.connect = (token, callback = defaultCallback, error = defaultCallback) => {
     const options = {
-      reconnect: false,
+      reconnection: false,
       secure: token.secure,
       forceNew: true,
       transports: ['websocket'],
-      rejectUnauthorized: false,
+      rejectUnauthorized: false
     };
-    socket = io.connect(token.host, options);
+
+    socket = io(token.host, options);
 
     socket.on('onAddStream', emit.bind(that, 'onAddStream'));
 
