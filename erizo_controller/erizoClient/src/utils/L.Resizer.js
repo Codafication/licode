@@ -214,14 +214,13 @@ L.ElementQueries = function ElementQueries() {
       /**
        * @param {CssRule[]|String} rules
        */
-  function readRules(originalRules) {
+  function readRules(rules) {
     let selector = '';
-    let rules = originalRules
-    if (!originalRules) {
+    if (!rules) {
       return;
     }
-    if (typeof originalRules === 'string') {
-      rules = originalRules.toLowerCase();
+    if (typeof rules === 'string') {
+      rules = rules.toLowerCase();
       if (rules.indexOf('min-width') !== -1 || rules.indexOf('max-width') !== -1) {
         extractQuery(rules);
       }
