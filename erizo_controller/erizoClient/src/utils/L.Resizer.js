@@ -216,7 +216,7 @@ L.ElementQueries = function ElementQueries() {
        */
   function readRules(originalRules) {
     let selector = '';
-    let rules;
+    let rules = originalRules
     if (!originalRules) {
       return;
     }
