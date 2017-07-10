@@ -132,9 +132,7 @@ if (GLOBAL.config.erizoController.listen_ssl) {  // jshint ignore:line
 }
 
 server.listen(GLOBAL.config.erizoController.listen_port); // jshint ignore:line
-var io = require('socket.io').listen(server, {log:false});
-
-io.set('transports', ['websocket']);
+var io = require('socket.io').listen(server, { log: false, transports: ['websocket'] });
 
 var nuveKey = GLOBAL.config.nuve.superserviceKey;
 
